@@ -5,6 +5,7 @@ import SelectionModal from './components/SelectionModal';
 import { bitable } from '@lark-base-open/js-sdk';
 import { getConfig, setConfig } from './utils/config';
 import { I18nProvider } from './utils/i18n';
+import './components/dark.css'; // 引入深色模式CSS
 
 const App: React.FC = () => {
   const [recordId, setRecordId] = useState<string | null>(null);
@@ -12,6 +13,7 @@ const App: React.FC = () => {
   const [recordIdTemp, setRecordIdTemp] = useState<string | null>(null);
   const [isSelectionActive, setIsSelectionActive] = useState<boolean>(true);
   const [globalSelectionId, setGlobalSelectionId] = useState<string | null>(null);
+  const [theme, setTheme] = useState<'LIGHT' | 'DARK'>('LIGHT');
 
   const checkSelection = async () => {
     try {
@@ -31,7 +33,7 @@ const App: React.FC = () => {
         }
       }
     } catch (error) {
-      console.error('Error fetching selection:', error);
+      console.error('获取选择内容时出错:', error);
     }
   };
 
@@ -61,6 +63,34 @@ const App: React.FC = () => {
     setRecordIdTemp(globalSelectionId);
     setIsSelectionActive(false);
   }, [globalSelectionId]);
+
+  const applyTheme = (theme: 'LIGHT' | 'DARK') => {
+    document.body.classList.toggle('dark-mode', theme === 'DARK');
+  };
+
+  useEffect(() => {
+    const fetchTheme = async () => {
+      try {
+        const theme = await bitable.bridge.getTheme();
+        setTheme(theme);
+        applyTheme(theme);
+      } catch (error) {
+        console.error('获取主题时出错:', error);
+      }
+    };
+
+    const onThemeChange = (event: { data: { theme: 'LIGHT' | 'DARK' } }) => {
+      const newTheme = event.data.theme;
+      setTheme(newTheme);
+      applyTheme(newTheme);
+    };
+
+    fetchTheme();
+
+    const unsubscribe = bitable.bridge.onThemeChange(onThemeChange);
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <I18nProvider>
