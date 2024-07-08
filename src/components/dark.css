@@ -1,0 +1,165 @@
+/* dark.css */
+body.dark-mode {
+  --color-primary: #5a85ff;
+  --color-danger: #ff6b6b;
+  --color-success: #4caf50;
+  --color-info: #3fc5ff;
+  --color-warn: #ffd60a;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode {
+  --svg-bg-color: #333;
+  --svg-stroke-color: #555;
+  --svg-rect-fill-color: #444;
+  --svg-rect-stroke-color: #4CAF50;
+  --svg-path-fill-color: #E0E0E0;
+}
+body.dark-mode .header {
+  color: #e0e0e0;
+}
+
+body.dark-mode .content {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .upper-content {
+  color: #e0e0e0;
+}
+
+body.dark-mode .line {
+  color: #e0e0e0;
+}
+
+body.dark-mode .small-text {
+  color: #b0b0b0;
+}
+
+body.dark-mode .medium-text {
+  color: #e0e0e0;
+}
+
+body.dark-mode .large-text {
+  color: #e0e0e0;
+}
+
+body.dark-mode .bottom-content {
+  color: #e0e0e0;
+}
+
+body.dark-mode .circle-button {
+  background-color: #333;
+  color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .circle-button-text {
+  color: #b0b0b0;
+}
+
+body.dark-mode .red {
+  background-color: var(--color-danger);
+}
+
+body.dark-mode .blue {
+  background-color: var(--color-primary);
+}
+
+body.dark-mode .tips {
+  color: #b0b0b0;
+}
+
+body.dark-mode .modal2 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal2-content {
+  background: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal2-header {
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal2-actions {
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal2 .btn-secondary {
+  background-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal2 .btn-danger {
+  background-color: var(--color-danger);
+  color: #e0e0e0;
+}
+
+body.dark-mode .default-page, 
+body.dark-mode .normal-page {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal:before,
+body.dark-mode .modal:after {
+  border-color: transparent transparent #555 transparent;
+}
+
+body.dark-mode .modal:after {
+  border-color: transparent transparent #333 transparent;
+}
+
+body.dark-mode .modal h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal label {
+  color: #b0b0b0;
+}
+
+body.dark-mode .modal input,
+body.dark-mode .modal select {
+  background-color: #555;
+  color: #e0e0e0;
+  border: 1px solid #777;
+}
+
+body.dark-mode .btn-noBackground {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn:hover {
+  opacity: 0.7;
+}
+
+body.dark-mode .btn-primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #e0e0e0;
+}
+
+body.dark-mode .btn-primary-e {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.dark-mode .textEditor {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #777;
+}
+
+body.dark-mode .textEditor:focus {
+  border: 1px solid var(--color-primary);
+}
