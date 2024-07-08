@@ -6,6 +6,14 @@
     --color-warn: #FFD60A;
 }
 
+:root {
+  --svg-bg-color: #E7EEFD;
+  --svg-stroke-color: #C9D2E4;
+  --svg-rect-fill-color: white;
+  --svg-rect-stroke-color: #1456F0;
+  --svg-path-fill-color: #1B1B1B;
+}
+
 body, html, #root, .App {
   margin: 0;
   padding: 0;
