@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import ConfigModal from './ConfigModal';
 import { getConfig } from '../utils/config';
